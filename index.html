@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/icons/icone.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio HTML CSS JS</title>
+</head>
+
+<body>
+    <header aria-label="Cabeçalho">
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="paginas/projetos.html" class="active">Projetos</a></li>
+                <li><a href="paginas/sobre.html">Sobre</a></li>
+                <li><a href="paginas/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="layout">
+        <aside class="perfil">
+            <img src="assets/img/perfil.jpg" alt="Foto de Gabriel Dittrich">
+            <h2>Gabriel Dittrich</h2>
+            <p>Estudante de ADS | Desenvolvedor Full Stack em formação</p>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/gabriel-dittrich/?locale=pt_BR" target="_blank"
+                        rel="noopener noreferrer" aria-label="Perfil no LinkedIn (abre em nova aba)">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/GabrielDittrich" target="_blank" rel="noopener noreferrer"
+                        aria-label="Perfil no GitHub (abre em nova aba)">
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:gdittrchcj@gmail.com" aria-label="Enviar e-mail para gdittrchcj@gmail.com">
+                        E-mail
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="conteudo-principal">
+            <section class="hero">
+                <h1>Portfólio Pessoal</h1>
+                <p>Projetos e experiências em desenvolvimento Full Stack</p>
+            </section>
+
+            <section class="carrossel" aria-label="Carrossel de projetos em destaque">
+                <h2>Projetos em Destaque</h2>
+                <div class="slides">
+                    <img src="assets/img/loja-instrumental.png" alt="Loja instrumental react">
+                    <img src="assets/img/catalogo-filmes.png" alt="Catálogo de filmes kotlin"
+                        style="width: 50%; height: 50%;">
+                    <img src="assets/img/petshop.png" alt="Petshop MySQL + React">
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer aria-label="Rodapé">
+        <p>&copy; 2025 Gabriel Dittrich - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

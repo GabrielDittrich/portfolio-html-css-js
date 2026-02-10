@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/icone.png">
+    <link rel="stylesheet" href="../style.css">
+    <title>Projetos</title>
+</head>
+
+<body>
+    <header aria-label="Cabeçalho">
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projetos.html" class="active">Projetos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="layout">
+        <aside class="perfil">
+            <img src="../assets/img/perfil.jpg" alt="Foto de Gabriel Dittrich">
+            <h2>Gabriel Dittrich</h2>
+            <p>Estudante de ADS | Desenvolvedor Full Stack em formação</p>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/gabriel-dittrich/?locale=pt_BR" target="_blank"
+                        rel="noopener noreferrer" aria-label="Perfil no LinkedIn (abre em nova aba)">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/GabrielDittrich" target="_blank" rel="noopener noreferrer"
+                        aria-label="Perfil no GitHub (abre em nova aba)">
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:gdittrchcj@gmail.com" aria-label="Enviar e-mail para gdittrchcj@gmail.com">
+                        E-mail
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="conteudo-principal" aria-label="Conteúdo Principal">
+            <section class="grid-projetos">
+
+                <article class="projeto-card">
+                    <img src="../assets/img/loja-instrumental.png" style="object-position: -70px center;"
+                        alt="Projeto React" class="card">
+                    <h3>Loja Instrumental React</h3>
+                    <p>Feito em React</p>
+                    <button class="abrir-modal" data-projeto="loja-instrumental">Ver mais</button>
+                </article>
+
+                <article class="projeto-card">
+                    <img src="../assets/img/petshop.png" alt="Projeto API C# + React" class="card">
+                    <h3>Gerenciamento de Petshop</h3>
+                    <p>API desenvolvida em C# com React + MySQL</p>
+                    <button class="abrir-modal" data-projeto="petshop">Ver mais</button>
+                </article>
+
+                <article class="projeto-card">
+                    <img src="../assets/img/catalogo-filmes.png" style="object-position: 0px center;"
+                        alt="Projeto Kotlin" class="card">
+                    <h3>Catálogo de Filmes</h3>
+                    <p>App feito em Kotlin com Jetpack Compose</p>
+                    <button class="abrir-modal" data-projeto="catalogo-filmes">Ver mais</button>
+                </article>
+
+                <article class="projeto-card">
+                    <img src="../assets/img/api.png" style="object-position: -95px center;"
+                        alt="Projeto API Restfull em C#" class="card">
+                    <h3>Folha de Pagamento</h3>
+                    <p> API RESTful em C# + React</p>
+                    <button class="abrir-modal" data-projeto="folha-pagamento">Ver mais</button>
+                </article>
+            </section>
+
+            <div id="modal" class="modal" aria-label="Modal">
+                <div class="modal-content">
+                    <span class="fechar">&times;</span>
+                    <h2 id="modal-titulo"></h2>
+                    <p id="modal-descricao"></p>
+                    <a id="modal-link" href="#" target="_blank">Ver no GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer aria-label="Rodapé">
+        <p>&copy; 2025 Gabriel Dittrich - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="../script.js" defer></script>
+</body>
+
+</html>

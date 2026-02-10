@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/icone.png">
+    <link rel="stylesheet" href="../style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("yDWiXKT_NlOFVPYiq"); // Substitua pela sua Public Key
+        })();
+    </script>
+    <title>Contato</title>
+</head>
+
+<body>
+    <header aria-label="Cabeçalho">
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="layout">
+        <aside class="perfil">
+            <img src="../assets/img/perfil.jpg" alt="Foto de Gabriel Dittrich">
+            <h2>Gabriel Dittrich</h2>
+            <p>Estudante de ADS | Desenvolvedor Full Stack em formação</p>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/gabriel-dittrich/?locale=pt_BR" target="_blank"
+                        rel="noopener noreferrer" aria-label="Perfil no LinkedIn (abre em nova aba)">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/GabrielDittrich" target="_blank" rel="noopener noreferrer"
+                        aria-label="Perfil no GitHub (abre em nova aba)">
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:gdittrchcj@gmail.com" aria-label="Enviar e-mail para gdittrchcj@gmail.com">
+                        E-mail
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <section class="conteudo-principal" aria-label="Formulario de contato">
+            <h2>Entre em Contato</h2>
+            <form id="formContato" method="POST" action="">
+                <fieldset>
+                    <legend>Envie sua mensagem</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer aria-label="Rodapé">
+        <p>&copy; 2025 Gabriel Dittrich - Todos os direitos reservados</p>
+    </footer>
+    <script>
+        function validarEmail(email) {
+            const padraoEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return padraoEmail.test(email);
+        }
+
+        document.getElementById("formContato").addEventListener("submit", function (e) {
+            e.preventDefault(); // Impede o envio padrão sempre
+
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const msg = document.getElementById("mensagem").value.trim();
+
+            if (!nome || !email || !msg) {
+                alert("Por favor, preencha todos os campos!");
+                return; // Sai cedo se inválido
+            }
+
+            if (!validarEmail(email)) {
+                alert("Por favor, insira um e-mail válido!");
+                return;
+            }
+
+            const button = this.querySelector('button[type="submit"]');
+            button.disabled = true;
+            button.textContent = 'Enviando...';
+
+            emailjs.send("service_g7kmc7g", "template_y72ghoe", { // SUBSTITUA PELOS SEUS IDs REAIS!
+                nome: nome,
+                email: email,
+                mensagem: msg
+            }).then(() => {
+                alert("Mensagem enviada com sucesso!");
+                document.getElementById("formContato").reset();
+            }).catch((error) => {
+                console.error("Erro EmailJS:", error); // Log no console para depuração
+                alert("Erro ao enviar: " + (error.text || "Verifique os IDs no EmailJS ou conexão."));
+            }).finally(() => {
+                button.disabled = false;
+                button.textContent = 'Enviar';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/icone.png">
+    <link rel="stylesheet" href="../style.css">
+    <title>Sobre</title>
+
+    <style>
+        table {
+            border-radius: 10px;
+            border: solid white;
+            margin: 0 auto;
+        }
+
+        th {
+            padding: 10px;
+            text-decoration: underline;
+            font-size: x-large;
+        }
+
+        th,
+        td {
+            border: solid 2px white;
+            padding: 5px;
+            background-color: rgb(68, 68, 68);
+        }
+
+        #navegacao a,
+        td a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-underline-offset: 3px;
+            transition: color .2s ease, text-decoration-color .2s ease;
+        }
+
+        a:hover {
+            color: #0077cc;
+            text-decoration: underline;
+            text-decoration-color: #0077cc;
+        }
+    </style>
+</head>
+
+<body>
+    <header aria-label="Cabeçalho">
+        <nav aria-label="Navegação principal">
+            <ul class="navegacao">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="sobre.html" class="active">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="layout">
+        <aside class="perfil">
+            <img src="../assets/img/perfil.jpg" alt="Foto de Gabriel Dittrich">
+            <h2>Gabriel Dittrich</h2>
+            <p>Estudante de ADS | Desenvolvedor Full Stack em formação</p>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/gabriel-dittrich/?locale=pt_BR" target="_blank"
+                        rel="noopener noreferrer" aria-label="Perfil no LinkedIn (abre em nova aba)">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/GabrielDittrich" target="_blank" rel="noopener noreferrer"
+                        aria-label="Perfil no GitHub (abre em nova aba)">
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:gdittrchcj@gmail.com" aria-label="Enviar e-mail para gdittrchcj@gmail.com">
+                        E-mail
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="conteudo-principal sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou estudante de Análise e Desenvolvimento de Sistemas na Universidade Positivo. <br>
+                Auxiliar de informática na empresa <span style="color: orange;">Atacadão</span>.</p>
+
+            <h3>Habilidades Técnicas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tecnologia</th>
+                        <th>Nível</th>
+                        <th>Projetos com link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C#</td>
+                        <td>Avançado</td>
+                        <td><a href="https://github.com/GabrielDittrich/folha-de-pagamento-api"
+                                aria-label="Ver API RESTful feita em C# no GitHub">API RESTful feita em C#</a></td>
+                    </tr>
+                    <tr>
+                        <td>PHP</td>
+                        <td>Avançado</td>
+                        <td><a href="https://github.com/GabrielDittrich/php-desenvolvimento-de-sistemas"
+                                aria-label="Ver repositório das aulas de PHP em ADS no GitHub">Repositório das aulas de
+                                PHP em ADS</a></td>
+                    </tr>
+                    <tr>
+                        <td>React</td>
+                        <td>Intermediário</td>
+                        <td><a href="https://github.com/GabrielDittrich/TaskManagerAPI"
+                                aria-label="Ver API ASP.NET Core com React e SQLite no GitHub">API ASP.NET Core com
+                                React e SQLite</a></td>
+                    </tr>
+                    <tr>
+                        <td>Kotlin</td>
+                        <td>Intermediário</td>
+                        <td><a href="https://github.com/GabrielDittrich/kotlin-desenvolvimento-aplicativos-moveis"
+                                aria-label="Ver repositório das aulas de Kotlin + Jetpack Compose no GitHub">Repositório
+                                das aulas de Kotlin + Jetpack Compose</a></td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>Intermediário</td>
+                        <td><a href="https://github.com/GabrielDittrich/java-desenvolvimento-de-software"
+                                aria-label="Ver repositório de Java POO no GitHub">Repositório de Java POO</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer aria-label="Rodapé">
+        <p>&copy; 2025 Gabriel Dittrich - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="../js/script.js" defer></script>
+</body>
+
+</html>
