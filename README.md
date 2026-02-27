@@ -74,5 +74,5 @@ Desenvolvedor Full Stack em formação
 
 ## 📄 Observação
 
-Este projeto representa minha base em desenvolvimento web. Projetos mais avançados utilizando **React, .NET e APIs REST** estão disponíveis em outros repositórios do meu GitHub.
+Este projeto representa minha base em desenvolvimento web.<br> Projetos mais avançados utilizando **React, .NET e APIs REST** estão disponíveis em outros repositórios do meu GitHub.
 
